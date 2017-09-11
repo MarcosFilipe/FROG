@@ -1,0 +1,23 @@
+@*
+ * Este template possui dois argumentos: mensagem do tipo String e
+ pessoa do tipo models.Pessoa
+ *@
+@(mensagem: String, pessoa: models.Pessoa)
+
+@*
+ * Chamada ao template 'main' com dois argumentos. O primeiro argumento
+ é um objeto da classe 'String' que contém o título da página. O segundo
+ é um objeto da classe 'Html' e contém o corpo da página.
+ *@
+@main("Bem vindo ao Play") {
+	<h5>Universidade Federal de Santa Catarina - Brasil <br>
+	Centro Tecnológico <br>
+	Departamento de Informática e Estatística <br>
+	INE5646 Programação para Web<hr>
+	</h5>
+	<h1>@mensagem</h1>
+
+	<h3>Bem vindo, @pessoa.nome</h3>
+	<p>Seu nome tem @pessoa.tamNome letras.</p>
+
+}

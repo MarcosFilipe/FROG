@@ -1,0 +1,27 @@
+@*
+ * Este template possui dois argumentos: mensagem do tipo String e
+ pessoa do tipo models.Pessoa
+ *@
+@(mensagem: String, pessoa: models.Pessoa)
+
+@*
+ * Chamada ao template 'main' com dois argumentos. O primeiro argumento
+ é um objeto da classe 'String' que contém o título da página. O segundo
+ é um objeto da classe 'Html' e contém o corpo da página.
+ *@
+@main("Bem vindo ao Play") {
+	<h2>@mensagem<hr>
+	</h2>
+	<div align="center">
+		<h1>Redação Online</h1>
+
+		<h3>Bem vindo!</h3>
+			<p>Redija sua redação para que possamos corrigir.</p>
+			<form id="redacao">
+				<label><strong>Nome: </strong></label>
+				<input type="text" id="autor" name="autor" placeholder="Seu nome vai aqui, bro!"><br><br>
+				<textarea id="texto-redacao" form="redacao" rows="80" cols="80" placeholder="Sua redação vai aqui, bro!"></textarea><br><br>
+				<input type="submit" name="enviar" value="Enviar Redação"><br><br><br><br>
+			</form>
+	</div>
+}

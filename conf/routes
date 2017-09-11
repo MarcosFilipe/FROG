@@ -1,0 +1,12 @@
+# Routes
+# Este arquivo define quais as requisições HTTP aceitas pelo servidor.
+# ~~~~
+
+# Requisição HTTP usando o método GET para o padrão de URL "/" será tratada pelo método index
+GET     /                           controllers.Application.index
+
+# Requisição HTTP usando o método GET para o padrão de URL "/assinc" será tratada pelo método indexAssincrono
+GET     /assinc                     controllers.Application.indexAssincrono
+
+# Requisições HTTP com o objetivo de obter recursos estáticos (imagens, arquivos CSS, arquivos JavaScript, etc)
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
